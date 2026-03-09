@@ -1,7 +1,7 @@
 title: "NET Lab"
 description: "Next-generation Experience and Technology Lab - DGIST"
-url: "" # GitHub Pages URL will go here, e.g. https://username.github.io
-baseurl: "" # Leave empty if deploying to root
+url: "https://danielk5432.github.io"
+baseurl: "/netlab.github.io"
 
 # Site info
 lab_name: "NET Lab"
