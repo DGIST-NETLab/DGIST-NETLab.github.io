@@ -1,0 +1,51 @@
+---
+layout: page
+title: Team
+nav: team
+permalink: /team
+---
+
+<div id="tmp_staff1" class="tmp_staff">
+  <ul class="clearfix">
+    {% for member in site.data.team.faculty %}
+    <li>
+      <span class="thumb">
+        <img src="{{ '/assets/images/' | append: member.photo | relative_url }}">
+      </span>
+      <div class="cont">
+        <div class="tit">{{ member.name }}</div>
+        <div class="txt">
+          <ul>
+            <li>{{ member.role }}<br/>Contact: {{ member.email }}</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% if site.data.team.students %}
+<h3>Students</h3>
+<div id="tmp_staff1" class="tmp_staff">
+  <ul class="clearfix">
+    {% for member in site.data.team.students %}
+    <li>
+      <span class="thumb">
+        {% if member.photo %}
+        <img src="{{ '/assets/images/' | append: member.photo | relative_url }}">
+        {% endif %}
+      </span>
+      <div class="cont">
+        <div class="tit">{{ member.name }}</div>
+        <div class="txt">
+          <ul>
+            <li>{{ member.role }}{% if member.email %}<br/>Contact: {{ member.email }}{% endif %}</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

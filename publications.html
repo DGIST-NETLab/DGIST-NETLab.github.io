@@ -1,0 +1,44 @@
+---
+layout: page
+title: Publications
+nav: publications
+permalink: /publications
+---
+
+<div class="line_solid"></div>
+
+<h3>Conference Publications (Full Paper)</h3>
+
+<div>
+  <ul class="bu">
+    {% for pub in site.data.publications.conference %}
+    <li>{{ pub.id }}. {{ pub.authors }}. {{ pub.title }}. {{ pub.venue }}.{% if pub.doi != "" %} DOI: <a href="{{ pub.doi }}" target="_blank">{{ pub.doi }}</a>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="line_solid"></div>
+
+<h3>Journal Publications</h3>
+
+<div>
+  <ul class="bu">
+    {% for pub in site.data.publications.journal %}
+    <li>{{ pub.id }}. {{ pub.authors }}. {{ pub.title }}. {{ pub.venue }}.{% if pub.doi != "" %} DOI: <a href="{{ pub.doi }}" target="_blank">{{ pub.doi }}</a>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="line_solid"></div>
+
+<h3>Conference Demos</h3>
+
+<div>
+  <ul class="bu">
+    {% for pub in site.data.publications.demos %}
+    <li>{{ pub.id }}. {{ pub.authors }}. {{ pub.title }}. {{ pub.venue }}.{% if pub.doi != "" %} DOI: <a href="{{ pub.doi }}" target="_blank">{{ pub.doi }}</a>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="line_solid"></div>

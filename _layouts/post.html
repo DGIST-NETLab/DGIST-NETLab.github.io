@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<script>
+$(window).on("scroll", function() {
+  if ($(window).scrollTop() > 160) {
+    $(".h-fix").addClass("fix");
+  } else {
+    $(".h-fix").removeClass("fix");
+  }
+});
+</script>
+
+<div id="wrap" class="sbg">
+{% include sub-visual.html %}
+	<div id="body_head" class="clearfix">
+		<div class="inwrap">
+			<div id="location">
+				<ul>
+				<li><a href="{{ '/' | relative_url }}">HOME</a></li>
+				<li><a href="{{ '/news' | relative_url }}">News</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div id="container" class="cbg sub-section d_width">
+		<section>
+		<div id="content">
+			<div id="body_title"><h1>{{ page.title }}</h1></div>
+			<div id="body_content">
+			<div class="board_view">
+				<div class="bv_title">
+					<strong>{{ page.title }}</strong>
+					<div class="info">
+						<span class="writer">{{ page.author | default: "netlab" }}</span>
+						<span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
+					</div>
+				</div>
+				<div class="bv_content" style="padding:30px 0;line-height:1.8;">
+					{{ content }}
+				</div>
+			</div>
+			<div class="btnarea tar" style="margin-top:20px;">
+				<a href="{{ '/news' | relative_url }}" class="btn_d btn_gray" style="display:inline-block;padding:8px 20px;background:#555;color:#fff;text-decoration:none;">목록</a>
+			</div>
+			</div>
+			<div id="body_foot"></div>
+		</div>
+		</section>
+		<aside></aside>
+	</div>
+</div>
+<div class="subf"></div>

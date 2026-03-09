@@ -1,0 +1,59 @@
+<svg>
+<style>
+#gnbmn ul.depth1 > li		{width:17%}
+#gnb		{background-color:rgb(0, 0, 0);}
+#gnbmn ul.depth1 li a	{color:rgb(255, 255, 255);}
+#gnbmn ul.depth1 li a:hover,
+#gnbmn ul.depth1 li a.on{color:rgb(0, 255, 255);}
+#gnbmn ul.depth2 li a	{color:rgb(255, 255, 255);}
+#gnbmn ul.depth2 li a:hover,
+#gnbmn ul.depth2 li a.on{color:rgb(53, 181, 198);}
+.gnb_bg		{background-color:rgb(0, 0, 0);}
+</style>
+</svg>
+<!-- header -->
+<header class="h-fix">
+	<div id="topwrap">
+		<div id="logo">
+		<a href="{{ '/' | relative_url }}">
+			<img src="{{ '/assets/images/logo.png' | relative_url }}" alt="로고이미지"/>
+			<span class="sub_name">NET Lab</span>
+		</a>
+		</div>
+		<div class="clearfix">
+			<div class="topmn">
+				<a href="https://dgist.ac.kr/" target="_blank" class="top-dk">DGIST</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="gnb">
+	<div id="gnbmn">
+		<nav>
+		<ul class="depth1 clearfix">
+			<li><a href="{{ '/research' | relative_url }}" {% if page.nav == 'research' %}class="on"{% endif %} title="Research 페이지로 이동합니다.">Research</a></li>
+			<li><a href="{{ '/team' | relative_url }}" {% if page.nav == 'team' %}class="on"{% endif %} title="Team 페이지로 이동합니다.">Team</a></li>
+			<li><a href="{{ '/publications' | relative_url }}" {% if page.nav == 'publications' %}class="on"{% endif %} title="Publications 페이지로 이동합니다.">Publications</a></li>
+			<li><a href="{{ '/news' | relative_url }}" {% if page.nav == 'news' %}class="on"{% endif %} title="News 페이지로 이동합니다.">News</a></li>
+		</ul>
+		</nav>
+	</div>
+	</div>
+	<div id="id_gnb_bg" class="gnb_bg"></div>
+</header>  
+
+<script>
+$(function(){
+	var top1Menu = $('#gnbmn');
+	var top1MenuW = top1Menu.width();
+	var top1MenuLi = $('ul.depth1 > li');
+	var top1MenuLiCnt = top1MenuLi.length;
+	if(top1MenuW>400){
+		var top1MenuLiP = (100 / top1MenuLiCnt).toFixed(1);
+		for(var i=0;i<top1MenuLiCnt;i++){
+			$(top1MenuLi[i]).css('width', top1MenuLiP+"%");
+		}
+	}
+});
+</script>
+<!-- //header -->

@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<script>
+$(window).on("scroll", function() {
+  if ($(window).scrollTop() > 160) {
+    $(".h-fix").addClass("fix");
+  } else {
+    $(".h-fix").removeClass("fix");
+  }
+});
+</script>
+
+<!-- container -->
+<div id="wrap" class="sbg">
+{% include sub-visual.html %}
+	<div id="body_head" class="clearfix">
+		<div class="inwrap">
+			<div id="location">
+				<ul>
+				<li><a href="{{ '/' | relative_url }}">HOME</a></li>
+				<li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div id="container" class="cbg sub-section d_width">
+		<!-- snb -->
+		<div id="snb">
+		<div id="snbmn">
+		<div class="tit" style="background-color:#555555;color:#FFFFFF;">{{ page.title }}</div>
+		</div>
+		</div>
+		<!-- //snb -->
+		<section>
+		<div id="content">
+			<div id="body_title"><h1>{{ page.title }}</h1></div>
+			<div id="body_content">
+			<!-- content -->
+			{{ content }}
+			<!-- //content -->
+			</div>
+			<div id="body_foot"></div>
+		</div>
+		</section>
+		<aside></aside>
+	</div>
+</div>
+<!-- //container -->
+<div class="subf">
+</div>

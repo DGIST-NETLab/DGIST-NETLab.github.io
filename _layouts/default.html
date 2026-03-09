@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=1460" />
+<meta name="description" content="{{ site.description }}">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.lab_full_name }}" />
+<meta property="og:description" content="{{ site.description }}" />
+
+<link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" />
+<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.lab_full_name }}</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ '/assets/css/jquery-ui-1.12.0.min.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' | relative_url }}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ '/assets/css/font.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/animate.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/common.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/board.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/page_tmp.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/title_tmp.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/dgist_tmp.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/owl.carousel.min.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/owl.theme.default.min.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/content.css' | relative_url }}" />
+
+<!-- JS -->
+<script src="{{ '/assets/js/jquery-3.1.1.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery.bxslider.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery-ui-1.12.1.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery.form.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/common.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/tmp_js.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/wow.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/owl.carousel.js' | relative_url }}"></script>
+
+<script>
+new WOW().init();
+$(document).ready(function(){
+  $(".depth1").bind('mouseover focusin', function(){
+    $('header').addClass('active');
+  });
+  $(".depth1").bind('mouseout focusout', function(){
+    $('header').removeClass('active');
+  });
+});
+</script>
+
+<script>
+$(window).on("scroll", function() {
+  if ($(window).scrollTop() > 120) {
+    $("#header").addClass("fix");
+  } else {
+    $("#header").removeClass("fix");
+  }
+});
+</script>
+
+</head>
+<body class="bodybg">
+<script src="{{ '/assets/js/menu.js' | relative_url }}"></script>
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+</body>
+</html>

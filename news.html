@@ -1,0 +1,37 @@
+---
+layout: page
+title: News
+nav: news
+permalink: /news
+---
+
+<div class="board_list">
+  <table summary="게시물 목록">
+    <thead>
+      <tr>
+        <th scope="col" style="width:50px;">번호</th>
+        <th scope="col">제목</th>
+        <th scope="col" style="width:200px" class="writer">작성자</th>
+        <th scope="col" style="width:100px;">작성일</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% assign posts = site.posts | sort: "date" | reverse %}
+      {% for post in posts %}
+      <tr{% if post.notice %} class="notice"{% endif %}>
+        <td class="num">{% if post.notice %}<span>공지</span>{% else %}{{ forloop.index }}{% endif %}</td>
+        <td class="subject">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </td>
+        <td class="writer">{{ post.author | default: "netlab" }}</td>
+        <td class="date">{{ post.date | date: "%Y-%m-%d" }}</td>
+      </tr>
+      {% endfor %}
+      {% if site.posts.size == 0 %}
+      <tr>
+        <td colspan="4" style="text-align:center;padding:40px;">게시글이 없습니다.</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>

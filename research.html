@@ -1,0 +1,130 @@
+---
+layout: page
+title: Research
+nav: research
+permalink: /research
+---
+
+<style>
+  .net-embodied {
+    --accent: #00D6D6;
+    --title: #0f0f10;
+    --text: #42464d;
+    --muted: #727885;
+    --card: #ffffff;
+    --ring: rgba(0, 214, 214, 0.25);
+    --shadow: 0 6px 20px rgba(15, 16, 18, 0.05);
+    font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+    color: var(--text);
+    background: transparent;
+    padding: 20px 0;
+  }
+  .net-embodied .container { max-width: 100%; margin: 0 auto; padding: 0 16px; }
+  .net-embodied h2 { margin: 8px 0 6px; font-weight: 700; color: var(--title); line-height: 1.2; font-size: 30px; }
+  .net-embodied .lead { font-size: 17px; line-height: 1.6; margin-bottom: 10px; color: var(--text); }
+  .net-embodied .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .net-embodied .card {
+    background: var(--card); border-radius: 10px; border: 1px solid rgba(15, 16, 18, 0.06);
+    box-shadow: var(--shadow); padding: 10px; display: grid; grid-template-columns: 28px 1fr;
+    gap: 8px; align-items: start; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .net-embodied .card:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0, 214, 214, 0.1); }
+  .net-embodied .icon {
+    width: 28px; height: 28px; border-radius: 6px;
+    background: linear-gradient(135deg, rgba(0,214,214,.12), rgba(0,214,214,.22));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent); font-size: 16px; font-weight: 700; border: 1px solid rgba(0, 214, 214, 0.25);
+  }
+  .net-embodied .card h3 { margin: 0 0 4px; font-size: 15px; color: var(--title); }
+  .net-embodied .card p { margin: 0; font-size: 15px; line-height: 1.4; color: var(--text); }
+</style>
+
+<!-- Section 1: Embodied Interaction -->
+<div class="c_width">
+  <div class="column_type1 clearfix">
+    <div class="thumb" style="width:682px;">
+      <img src="{{ '/assets/images/netlab2025091813535668cb90643f5d3' | relative_url }}" class="img_re" alt="ResearchVision1.png">
+    </div>
+    <div class="txt" style="width:calc(100% - 682px);">
+      <div>
+        <section class="net-embodied" aria-labelledby="net-embodied-title">
+          <div class="container">
+            <h2 id="net-embodied-title">Embodied Interaction for Wearables &amp; VR/AR</h2>
+            <p class="lead">
+              Our research is grounded in <strong>Embodied Interaction</strong>, emphasizing seamless integration
+              between the human body and digital technologies. We envision interaction paradigms where the body becomes
+              the primary medium of input and output, enabling intuitive, expressive, and multisensory experiences.
+            </p>
+            <div class="grid">
+              <article class="card"><div class="icon">1</div><div><h3>Wearable &amp; Tangible Interfaces</h3><p>Designing low-barrier, body-centric systems that leverage the human form for natural interaction in both physical and virtual spaces.</p></div></article>
+              <article class="card"><div class="icon">2</div><div><h3>Multisensory &amp; Haptic Feedback</h3><p>Integrating tactile, thermal, and auditory cues to enrich immersion and presence across XR environments.</p></div></article>
+              <article class="card"><div class="icon">3</div><div><h3>Spatial &amp; Context-aware Interaction</h3><p>Creating adaptive interfaces that respond dynamically to user context, environment, and task demands.</p></div></article>
+              <article class="card"><div class="icon">4</div><div><h3>Real-time Prototyping &amp; Evaluation</h3><p>Building experimental platforms to rapidly test new concepts with rigorous user studies and metrics.</p></div></article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div class="line_solid"></div>
+
+<!-- Section 2: High-bandwidth Input -->
+<div class="c_width">
+  <div class="column_type2 clearfix">
+    <div class="txt" style="width:calc(100% - 672px)">
+      <div>
+        <section class="net-embodied" aria-labelledby="net-highbandwidth-title">
+          <div class="container">
+            <h2 id="net-highbandwidth-title">High-bandwidth Input Techniques</h2>
+            <p class="lead">
+              We envision a future where input systems seamlessly capture the full bandwidth of human expression—from fine-grained finger motions to whole-body gestures—bridging the gap between physical and virtual worlds. Our research investigates:
+            </p>
+            <div class="grid">
+              <article class="card"><div class="icon">1</div><div><h3>High-fidelity Sensing and Tracking</h3><p>Leveraging computer vision, wearable sensors, and hybrid sensing techniques to achieve accurate, low-latency motion capture in 3D space.</p></div></article>
+              <article class="card"><div class="icon">2</div><div><h3>Expressive and Multimodal Interaction</h3><p>Combining gestures with voice, gaze, haptics, and context-aware signals for richer user input channels.</p></div></article>
+              <article class="card"><div class="icon">3</div><div><h3>Adaptive and Personalized Interfaces</h3><p>Developing machine learning models that adapt input techniques to individual users, tasks, and environments.</p></div></article>
+              <article class="card"><div class="icon">4</div><div><h3>Performance and Usability Evaluation</h3><p>Building experimental platforms to systematically evaluate input bandwidth, accuracy, and user experience across diverse application domains.</p></div></article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="thumb" style="width:672px">
+      <img src="{{ '/assets/images/netlab2025091814102468cb9440c2ccc' | relative_url }}" class="img_re" alt="ResearchVision2.png">
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div class="line_solid"></div>
+
+<!-- Section 3: Realistic and Immersive Experience -->
+<div class="c_width">
+  <div class="column_type1 clearfix">
+    <div class="thumb" style="width:666px;">
+      <img src="{{ '/assets/images/netlab2025091814133868cb950232e82' | relative_url }}" class="img_re" alt="ResearchVision3.png">
+    </div>
+    <div class="txt" style="width:calc(100% - 666px);">
+      <div>
+        <section class="net-embodied" aria-labelledby="net-immersive-title">
+          <div class="container">
+            <h2 id="net-immersive-title">Realistic and Immersive Experience</h2>
+            <p class="lead">
+              We envision a future where the boundary between real and virtual worlds dissolves, enabling users to experience seamless and lifelike interactions that engage multiple senses simultaneously. To achieve this, our research explores:
+            </p>
+            <div class="grid">
+              <article class="card"><div class="icon">1</div><div><h3>Multimodal Feedback Integration</h3><p>Designing interfaces that combine haptic, auditory, visual, and thermal cues to replicate real-world sensations and enhance perceptual realism.</p></div></article>
+              <article class="card"><div class="icon">2</div><div><h3>Cross-reality Interaction Design</h3><p>Developing interaction paradigms that unify physical robots, tangible interfaces, and virtual agents within a single immersive ecosystem.</p></div></article>
+              <article class="card"><div class="icon">3</div><div><h3>Immersion Evaluation</h3><p>Creating user-centered evaluation frameworks to measure presence, realism, and cognitive engagement in both real and virtual contexts.</p></div></article>
+              <article class="card"><div class="icon">4</div><div><h3>Adaptive &amp; Context-aware Rendering</h3><p>Leveraging AI-driven models to dynamically adapt sensory feedback based on user states, environmental factors, and interaction intent.</p></div></article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
