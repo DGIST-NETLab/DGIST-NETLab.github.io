@@ -1,7 +1,7 @@
 title: "NET Lab"
 description: "Next-generation Experience and Technology Lab - DGIST"
-url: "https://danielk5432.github.io"
-baseurl: "/netlab.github.io"
+url: "https://dgist-netlab.github.io/"
+baseurl: ""
 
 # Site info
 lab_name: "NET Lab"
