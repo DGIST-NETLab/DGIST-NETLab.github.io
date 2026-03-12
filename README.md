@@ -1,5 +1,7 @@
 # NET Lab Website
 
+주소 : https://dgist-netlab.github.io/
+
 DGIST NET Lab (Next-generation Experience and Technology Lab) 홈페이지.  
 Jekyll 기반 정적 사이트로, GitHub Pages에 배포 가능합니다.
 
