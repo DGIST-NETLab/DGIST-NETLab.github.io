@@ -13,15 +13,29 @@
   {% assign seo_title = site.lab_full_name %}
 {% endif %}
 <meta name="description" content="{{ site.description }}">
+<meta name="application-name" content="{{ site.og_site_name | default: site.lab_full_name }}" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="{{ site.og_site_name | default: site.lab_full_name }}" />
 <meta property="og:title" content="{{ seo_title }}" />
 <meta property="og:description" content="{{ site.description }}" />
 <meta property="og:url" content="{{ page.url | absolute_url }}" />
-<meta property="og:image" content="{{ '/assets/images/favicon.ico' | absolute_url }}" />
+<meta property="og:image" content="{{ '/favicon-48x48.png' | absolute_url }}" />
 
-<link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" />
+<link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon-48x48.png' | relative_url }}" />
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any" />
+<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
+<link rel="apple-touch-icon" href="{{ '/assets/images/logo.png' | relative_url }}" />
 <title>{{ seo_title }}</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.og_site_name | default: site.lab_full_name }}",
+  "alternateName": "{{ site.lab_full_name }}",
+  "url": "{{ site.url | append: site.baseurl }}"
+}
+</script>
 
 <!-- CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/jquery-ui-1.12.0.min.css' | relative_url }}" />
