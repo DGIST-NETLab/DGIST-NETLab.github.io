@@ -6,6 +6,7 @@ baseurl: ""
 # Site info
 lab_name: "NET Lab"
 lab_full_name: "NET Lab | DGIST"
+og_site_name: "DGIST NETLab"
 university: "DGIST"
 department: "Department of Electrical Engineering and Computer Science"
 

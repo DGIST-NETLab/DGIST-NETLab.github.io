@@ -6,13 +6,22 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=1460" />
+{% assign page_title_clean = page.title | default: "" | strip %}
+{% if page_title_clean != "" %}
+  {% assign seo_title = page_title_clean | append: " - " | append: site.lab_full_name %}
+{% else %}
+  {% assign seo_title = site.lab_full_name %}
+{% endif %}
 <meta name="description" content="{{ site.description }}">
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{% if page.title and page.title != "" %}{{ page.title }} - {% endif %}{{ site.lab_full_name }}" />
+<meta property="og:site_name" content="{{ site.og_site_name | default: site.lab_full_name }}" />
+<meta property="og:title" content="{{ seo_title }}" />
 <meta property="og:description" content="{{ site.description }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:image" content="{{ '/assets/images/favicon.ico' | absolute_url }}" />
 
 <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" />
-<title>{% if page.title and page.title != "" %}{{ page.title }} - {% endif %}{{ site.lab_full_name }}</title>
+<title>{{ seo_title }}</title>
 
 <!-- CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/jquery-ui-1.12.0.min.css' | relative_url }}" />
