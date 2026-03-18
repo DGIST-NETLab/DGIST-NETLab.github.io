@@ -9,8 +9,28 @@ permalink: /team
   #body_title {
     display: none;
   }
+
+  .team-page h3 {
+    margin: 48px 0 22px 0;
+  }
+
+  .team-page #tmp_staff1 > ul > li {
+    min-height: 170px;
+    margin: 0 0 34px 0;
+    padding: 0 0 34px 0;
+  }
+
+  .team-page #tmp_staff1 .cont .txt {
+    margin-top: 16px;
+    padding: 20px 25px;
+  }
+
+  .team-page > #tmp_staff1:first-child + h3 {
+    margin-top: 52px;
+  }
 </style>
 
+<div class="team-page">
 <div id="tmp_staff1" class="tmp_staff">
   <ul class="clearfix">
     {% for member in site.data.team.faculty %}
@@ -55,3 +75,4 @@ permalink: /team
   </ul>
 </div>
 {% endif %}
+</div>
