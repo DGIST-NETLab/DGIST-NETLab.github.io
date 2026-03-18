@@ -25,12 +25,30 @@ permalink: /team
     padding: 20px 25px;
   }
 
+  .team-page #tmp_staff1 > ul > li.empty-member {
+    min-height: 0;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+  }
+
+  .team-page #tmp_staff1 > ul > li.empty-member .cont {
+    margin-left: 0;
+  }
+
+  .team-page #tmp_staff1 > ul > li.empty-member .tit {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #777;
+  }
+
   .team-page > #tmp_staff1:first-child + h3 {
     margin-top: 52px;
   }
 </style>
 
 <div class="team-page">
+<h3>Professor</h3>
 <div id="tmp_staff1" class="tmp_staff">
   <ul class="clearfix">
     {% for member in site.data.team.faculty %}
@@ -51,11 +69,10 @@ permalink: /team
   </ul>
 </div>
 
-{% if site.data.team.students %}
-<h3>Students</h3>
+<h3>Postdoctoral Researcher</h3>
 <div id="tmp_staff1" class="tmp_staff">
   <ul class="clearfix">
-    {% for member in site.data.team.students %}
+    {% for member in site.data.team.postdoc %}
     <li>
       <span class="thumb">
         {% if member.photo %}
@@ -74,5 +91,81 @@ permalink: /team
     {% endfor %}
   </ul>
 </div>
-{% endif %}
+
+<h3>PhD Students</h3>
+<div id="tmp_staff1" class="tmp_staff">
+  <ul class="clearfix">
+    {% for member in site.data.team.phd %}
+    <li>
+      <span class="thumb">
+        {% if member.photo %}
+        <img src="{{ '/assets/images/' | append: member.photo | relative_url }}">
+        {% endif %}
+      </span>
+      <div class="cont">
+        <div class="tit">{{ member.name }}</div>
+        <div class="txt">
+          <ul>
+            <li>{{ member.role }}{% if member.email %}<br/>Contact: {{ member.email }}{% endif %}</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<h3>Master's Students</h3>
+<div id="tmp_staff1" class="tmp_staff">
+  <ul class="clearfix">
+    {% if site.data.team.master and site.data.team.master.size > 0 %}
+      {% for member in site.data.team.master %}
+    <li>
+      <span class="thumb">
+        {% if member.photo %}
+        <img src="{{ '/assets/images/' | append: member.photo | relative_url }}">
+        {% endif %}
+      </span>
+      <div class="cont">
+        <div class="tit">{{ member.name }}</div>
+        <div class="txt">
+          <ul>
+            <li>{{ member.role }}{% if member.email %}<br/>Contact: {{ member.email }}{% endif %}</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+      {% endfor %}
+    {% else %}
+    <li class="empty-member">
+      <div class="cont">
+        <div class="tit">Currently no members</div>
+      </div>
+    </li>
+    {% endif %}
+  </ul>
+</div>
+
+<h3>Undergraduate Researchers</h3>
+<div id="tmp_staff1" class="tmp_staff">
+  <ul class="clearfix">
+    {% for member in site.data.team.undergrad %}
+    <li>
+      <span class="thumb">
+        {% if member.photo %}
+        <img src="{{ '/assets/images/' | append: member.photo | relative_url }}">
+        {% endif %}
+      </span>
+      <div class="cont">
+        <div class="tit">{{ member.name }}</div>
+        <div class="txt">
+          <ul>
+            <li>{{ member.role }}{% if member.email %}<br/>Contact: {{ member.email }}{% endif %}</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 </div>

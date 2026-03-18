@@ -4,13 +4,19 @@ faculty:
     email: "hyunjae.gil@dgist.ac.kr"
     photo: "2025091813485868cb8f3ac8d1a"
 
-students:
+postdoc:
   - name: "신용환"
     role: "Postdoctoral Researcher"
     photo: "default-profile-gray"
+
+phd:
   - name: "이해성"
     role: "PhD Student"
     photo: "default-profile-gray"
+
+master: []
+
+undergrad:
   - name: "장연우"
     role: "Undergraduate Researcher"
     photo: "default-profile-gray"
