@@ -7,11 +7,13 @@ faculty:
 postdoc:
   - name: "신용환"
     role: "Postdoctoral Researcher"
+    email: "yonghwanshin@dgist.ac.kr"
     photo: "default-profile-gray"
 
 phd:
   - name: "이해성"
     role: "PhD Student"
+    email: "haeseong@dgist.ac.kr"
     photo: "default-profile-gray"
 
 master: []
@@ -19,10 +21,13 @@ master: []
 undergrad:
   - name: "장연우"
     role: "Undergraduate Researcher"
+    email: "yunoojang@dgist.ac.kr"
     photo: "default-profile-gray"
   - name: "모윤석"
     role: "Undergraduate Researcher"
+    email: "bryanmo04@dgist.ac.kr"
     photo: "default-profile-gray"
   - name: "김동현"
     role: "Undergraduate Researcher"
+    email: "danielk@dgist.ac.kr"
     photo: "default-profile-gray"
