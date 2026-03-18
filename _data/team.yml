@@ -4,10 +4,19 @@ faculty:
     email: "hyunjae.gil@dgist.ac.kr"
     photo: "2025091813485868cb8f3ac8d1a"
 
-# 새 멤버를 추가하려면 아래 형식으로 추가하세요:
-# students:
-#   - name: "홍길동"
-#     role: "M.S. Student"
-#     email: "example@dgist.ac.kr"
-#     photo: "파일명"
-#     website: "https://example.com"  # 선택사항
+students:
+  - name: "신용환"
+    role: "Postdoctoral Researcher"
+    photo: "default-profile-gray"
+  - name: "이해성"
+    role: "PhD Student"
+    photo: "default-profile-gray"
+  - name: "장연우"
+    role: "Undergraduate Researcher"
+    photo: "default-profile-gray"
+  - name: "모윤석"
+    role: "Undergraduate Researcher"
+    photo: "default-profile-gray"
+  - name: "김동현"
+    role: "Undergraduate Researcher"
+    photo: "default-profile-gray"
